@@ -1,11 +1,17 @@
-# Учебный шаблон проекта Portfolio
+# Выпускной проект курса: Продвинутый курс по веб-разработке
+
+**Тема проекта:** Mountains
+**Автор:** Ольга Егер
+**Наставник:** Ольга Болотова
+**Дата прохождения курса:** 17.12.2018 - 28.01.2019
+UI можно посмотреть по здесь:  https://olgajaer.github.io/mountains/
 
 > Перед установкой зависимостей и запуском проекта убедитесь, что у вас установлена [последняя версия Node.js & NPM](https://nodejs.org/en/download/current/)
 
 ##  Чтобы развернуть проект необходимо:
 ```sh
-$ git clone git@github.com:loftschool/advanced-boilerplate.git
-$ cd advanced-boilerplate
+$ git clone https://github.com/OlgaJaer/mountains.git
+$ cd mountains
 $ npm install
 ```
 
