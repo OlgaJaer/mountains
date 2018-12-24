@@ -1,0 +1,24 @@
+.footer {
+    background-color: rgb($grey);
+    opacity: 0.95;
+}
+.footer__row{
+    display: flex;
+    align-items: center;
+    height: 75px;
+    &:first-child{
+        border: 1px solid rgba($light-grey, 0.3);
+    }
+}
+.footer__col{
+    flex: 1;
+    display: flex;
+}
+.footer__col_justyfy_right {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+.footer__socials{
+    margin-right: 30px;
+}

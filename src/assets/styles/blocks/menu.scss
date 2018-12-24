@@ -1,0 +1,23 @@
+.menu{
+    color: white;
+}
+.menu__list {
+    display: flex;
+}
+.menu__item{
+    margin-right: 40px;
+    &:last-child{
+        margin-right: 0;
+    }
+    &:first-child{
+        margin-left: 30px;
+    }
+}
+.menu__link{
+    text-decoration: none;
+    color: $white;
+    transition: 500ms;
+    &:hover{
+        color:$green;
+    }
+}
