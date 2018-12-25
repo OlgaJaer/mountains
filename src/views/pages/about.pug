@@ -10,7 +10,9 @@ block content
    
   header.header
     .header__socials
-      ul.socials
+
+      +socials('header')
+      //-ul.socials
         each social in ['vk', 'github', 'in']
           li.socials__item
             a(href="").socials__link
@@ -22,6 +24,7 @@ block content
 
     .header__content
       +image('titles/portfolio_header.png', 'page title', 'title-img')
+      
       .header__user-desc
         .user
           .user__pic-container
@@ -75,5 +78,4 @@ block content
                         svg(viewBox="0 0 100 100" preserveAspectRatio="none").skill__figure
                           circle(cx="50" cy="50" r="40").skill__circle.skill__circle_under
                           circle(cx="50" cy="50" r="40").skill__circle.skill__circle_above
-                        .skill__title #{skill[0]}
-                  
+                        .skill__title #{skill[0]}               
