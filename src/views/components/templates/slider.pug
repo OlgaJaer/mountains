@@ -1,0 +1,33 @@
+script(type="text/x-template")#slider-root
+    .slider-container
+        info
+        display
+        btns
+
+script(type="text/x-template")#slider-info
+    .slider__info-container
+        .slider__info
+            .slider__info-title
+                .subtitle Залоалоыло
+                .slider__info-skills One,  two, three
+                .slider__info-button
+                    a(href="").iconed-button
+                        .iconed-button__icon
+                            i.fa.fa-link
+                        .iconed-button__text Посмотреть сайт
+
+script(type="text/x-template")#slider-display 
+    .slider__display
+        img(src="", alt="").slider__big-pic
+
+
+script(type="text/x-template")#slider-btns
+    .slider__buttons
+        .slider__button()
+            .slider__button-container
+                .slider__button-img-wrap
+                    img(src="", alt="").slider__button-pic
+        .slider__button.slider__button_next()
+            .slider__button-container
+                .slider__button-img-wrap()
+                    img(src="", alt="").slider__button-pic                    

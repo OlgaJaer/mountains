@@ -7,64 +7,40 @@ block scripts
   script(src='about.bundle.js')
 
 block content
-   
-  header.header
-    .header__socials
 
-      +socials('header')
-      //-ul.socials
-        each social in ['vk', 'github', 'in']
-          li.socials__item
-            a(href="").socials__link
-              +icon(social, "socials__icon")
-
-    .header__menu
-      a(href="").hamburger
-        .hamburger__planks
-
-    .header__content
-      +image('titles/portfolio_header.png', 'page title', 'title-img')
-      
-      .header__user-desc
-        .user
-          .user__pic-container
-            .user__pic
-              +image('content/user.jpeg', 'user pic', 'user__pic-img')
-          .user__info
-            .user__name Ольга Егер
-            .user__desc Личный сайт веб разработчика
-
-    .header__btn
-      button.arrow
-        +icon('arrow_down', 'arrow__down')
+  include ../common/header
+  
 
   section.about
     article.skills
       .skills__block.skills__block--about
         .skills__left-title
-          h2.title Обо мне
+          
           +image('titles/about_header.png', 'background', 'about__title-icon')
+          h1.subtitle.subtitle--about Обо мне
         .skills__user-info
           .user-desc
             .user-desc__pic
-              img(src="./assets/images/content/user.jpg", alt="user").user-desc__pic-img
+              img(src="./assets/images/content/me.jpg", alt="user").user-desc__pic-img
             .user-desc__info
-              h3.user-desc__title
-                .subtitle Кто я
+              h2.user-desc__title
+                h3.subtitle.subtitle--who Кто я
               .user-desc__text
                 p Я веб разработчик из Уфы. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
                 p Этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
       .skills__block.skills__block--achievements
         .skills__right-title
-          .subtitle Чем я могу быть полезна
+          .subtitle.subtitle--use Чем я могу быть вам полезна
         .skills__small-desc
           .p Больше всего меня привлекет Frontend разработка, но я также знакома и могу решать не сложные задачи на Backend. Но давайте по порядку.
         .skills__content
+         
+
           - 
             var skills = [
               ['Frontend', [['Html5', 30], ['css3', 50], ['JavaScript & jQuery', 70]]],
               ['Backend', [['PHP', 30], ['mySQL', 50], ['Node.js & npm', 70]]],
-              ['WorkFlow', [['Git', 30], ['Gulp', 50], ['Bower', 70]]],
+              ['WorkFlow', [['Git', 30], ['Gulp', 50], ['Bower', 20]]],
             ]
 
           ul.skills-list
@@ -76,6 +52,27 @@ block content
                     li.skills-row__item
                       figure.skill(data-percents="70")
                         svg(viewBox="0 0 100 100" preserveAspectRatio="none").skill__figure
-                          circle(cx="50" cy="50" r="40").skill__circle.skill__circle_under
-                          circle(cx="50" cy="50" r="40").skill__circle.skill__circle_above
-                        .skill__title #{skill[0]}               
+                          circle(cx="50%" cy="50%" r="40").skill__circle.skill__circle_under
+                          circle(cx="50%" cy="50%" r="40").skill__circle.skill__circle_above
+                        .skill__title #{skill[0]}   
+
+  section.map
+    .map-img
+      .contacts
+        .contacts__title
+          h3.subtitle Контакты
+        address.contacts__info
+          ul.contacts__list
+            - 
+              var contacts = [
+                ['skype', 'olgar.mamaeva'],
+                ['envelope', 'olgar.mamaeva@rambler.ru'],
+                ['phone', '+7 (903) 355-96-53'],
+                ['map_marker', 'Башкортостан, г.Уфа']
+              ]
+            each item in contacts
+              li.contacts__item
+                .contacts__icon
+                  +icon(`${item[0]}`, 'contacts__icon-img')
+                .contacts__desc #{item[1]}
+

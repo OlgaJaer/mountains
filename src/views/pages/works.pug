@@ -1,0 +1,21 @@
+extends ../main.layout.pug
+
+block variables
+  - var title = 'Мои работы'
+
+block scripts
+  script(src='works.bundle.js')
+
+block content
+
+  include ../common/header.pug
+
+  section.slider
+    .slider__title
+      .title-bg
+        +icon('works_header', 'title__pic')
+      h1.title Мои работы
+    .slider__wrapper
+      #slider-component    
+
+  

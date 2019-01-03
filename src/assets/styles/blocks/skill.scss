@@ -14,7 +14,11 @@
     transform: rotate(-90deg);
 }
 
-.skills__row-item {
+.skills-row__list {
+    display: flex;
+}
+
+.skills-row__item {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
@@ -31,7 +35,7 @@
     stroke: $green;
     stroke-width: 20px;
     stroke-dasharray: 282.6;
-    stroke-dashoffset: 282.6;
+    stroke-dashoffset: 180;
 }
 
 .skill__title {

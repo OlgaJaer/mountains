@@ -1,23 +1,49 @@
-.menu{
+.menu {
     color: white;
 }
+
 .menu__list {
     display: flex;
-}
-.menu__item{
-    margin-right: 40px;
-    &:last-child{
-        margin-right: 0;
-    }
-    &:first-child{
-        margin-left: 30px;
+
+    &--welcome {
+        justify-content: space-around;
     }
 }
-.menu__link{
+
+.menu__item {
+    &--footer {
+        margin-right: 40px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &:first-child {
+            margin-left: 30px;
+        }
+
+    }
+
+    &--welcome {
+        padding: 15px 31px;
+        background-color: $green;
+        color: #fff;
+
+        &:hover {
+            background-color: $green-hover;
+        }
+    }
+}
+
+.menu__link {
     text-decoration: none;
     color: $white;
     transition: 500ms;
-    &:hover{
-        color:$green;
+
+    &--footer {
+
+        &:hover {
+            color: $green;
+        }
     }
 }

@@ -1,11 +1,12 @@
 .welcome {
   height: 100vh;
-  background: url("./assets/images/bg/mountains.jpg") center center / cover no-repeat;
+  //background: url("./assets/images/bg/mountains.jpg") center center / cover no-repeat;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-height: 650px;
 
   &__btn {
     position: absolute;
@@ -39,33 +40,5 @@
   &__copyright {
     position: absolute;
     bottom: 40px;
-  }
-
-
-}
-
-.copyright {
-  width: 100%;
-  color: $white;
-
-  &_center {
-    text-align: center;
-  }
-}
-
-.user {
-  &__container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-
-  &__pic {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    overflow: hidden;
   }
 }

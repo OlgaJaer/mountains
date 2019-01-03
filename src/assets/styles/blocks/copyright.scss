@@ -1,0 +1,18 @@
+.copyright {
+  width: 100%;
+  color: $white;
+  opacity: 0.5;
+
+  &_center {
+    text-align: center;
+    opacity: 1;
+  }
+
+  &_align_right {
+    text-align: end;
+    padding: 10px;
+  }
+  &_margin_left {
+    margin-left: 10px;
+  }
+}

@@ -1,6 +1,10 @@
 .footer {
     background-color: rgb($grey);
     opacity: 0.95;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 .footer__row{
     display: flex;

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Portfolio | Мои работы</title>
+    <link rel="stylesheet" href="main.min.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="maincontent">
+        <header class="header">
+          <div class="header-container">
+            <div class="header__socials">
+              <ul class="socials">
+                <li class="socials__item"><a class="socials__linkundefined" href="https://vk.com/olga_volcano">
+                    <svg class="socials__icon socials__icon--header">
+                      <use xlink:href="./assets/images/icons/sprite.svg#vk"></use>
+                    </svg></a></li>
+                <li class="socials__item"><a class="socials__linkundefined" href="https://github.com/OlgaJaer">
+                    <svg class="socials__icon socials__icon--header">
+                      <use xlink:href="./assets/images/icons/sprite.svg#github"></use>
+                    </svg></a></li>
+                <li class="socials__item"><a class="socials__linkundefined" href="http://in.com">
+                    <svg class="socials__icon socials__icon--header">
+                      <use xlink:href="./assets/images/icons/sprite.svg#in"></use>
+                    </svg></a></li>
+              </ul>
+            </div>
+            <div class="header__menu"><a class="hamburger" href="">
+                <div class="hamburger__planks"></div></a></div>
+            <div class="header__content"><img class="title-img" src="/assets/images/titles/portfolio_header.png" alt="page title"/>
+              <div class="header__user-desc">
+                <div class="user">
+                  <div class="user__container">
+                    <div class="user__pic"><img class="user__pic-img" src="/assets/images/content/me-square.jpg" alt="user pic"/>
+                    </div>
+                    <div class="user__info"> 
+                      <h2 class="user__name">Ольга Егер</h2>
+                      <h3 class="user__desc">Личный сайт веб разработчика </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="header__btn">
+              <button class="arrow">
+                <svg class="arrow__down">
+                  <use xlink:href="./assets/images/icons/sprite.svg#arrow_down"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </header>
+        <section class="slider">
+          <div class="slider__title">
+            <div class="title-bg">
+              <svg class="title__pic">
+                <use xlink:href="./assets/images/icons/sprite.svg#works_header"></use>
+              </svg>
+            </div>
+            <h1 class="title">Мои работы</h1>
+          </div>
+          <div class="slider__wrapper">
+            <div id="slider-component">   </div>
+          </div>
+        </section>
+      </div>
+      <footer class="footer">
+        <div class="footer__row">
+          <div class="footer__col">
+            <nav class="menu menu--footer">
+              <ul class="menu__list menu__list--footer">
+                <li class="menu__item menu__item--footer"><a class="menu__link menu__link--footer" href="works.html">Мои работы</a></li>
+                <li class="menu__item menu__item--footer"><a class="menu__link menu__link--footer" href="about.html">Обо мне</a></li>
+                <li class="menu__item menu__item--footer"><a class="menu__link menu__link--footer" href="blog.html">Блог</a></li>
+                <li class="menu__item menu__item--footer"><a class="menu__link menu__link--footer" href="index.html">Авторизация</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="footer__col footer__col_justyfy_right">
+            <div class="footer__socials">
+              <ul class="socials">
+                <li class="socials__item"><a class="socials__link--rounded" href="https://vk.com/olga_volcano">
+                    <svg class="socials__icon socials__icon--footer">
+                      <use xlink:href="./assets/images/icons/sprite.svg#vk"></use>
+                    </svg></a></li>
+                <li class="socials__item"><a class="socials__link--rounded" href="https://github.com/OlgaJaer">
+                    <svg class="socials__icon socials__icon--footer">
+                      <use xlink:href="./assets/images/icons/sprite.svg#github"></use>
+                    </svg></a></li>
+                <li class="socials__item"><a class="socials__link--rounded" href="http://in.com">
+                    <svg class="socials__icon socials__icon--footer">
+                      <use xlink:href="./assets/images/icons/sprite.svg#in"></use>
+                    </svg></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer__row">
+          <div class="footer__col">
+            <div class="copyright copyright_margin_left"> 
+              <p>Этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool. </p>
+            </div>
+          </div>
+          <div class="footer__col footer__col_justyfy_right">
+            <div class="copyright copyright_align_right">
+              <p>&copy; Ольга Егер | Создано с любовью в LoftSchool | 2018</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script type="text/x-template" id="slider-root">
+      <div class="slider-container">
+        <info></info>
+        <display></display>
+        <btns></btns>
+      </div>
+    </script>
+    <script type="text/x-template" id="slider-info">
+      <div class="slider__info-container">
+        <div class="slider__info">
+          <div class="slider__info-title">
+            <div class="subtitle">Залоалоыло</div>
+            <div class="slider__info-skills">One,  two, three</div>
+            <div class="slider__info-button"><a class="iconed-button" href="">
+                <div class="iconed-button__icon"><i class="fa fa-link"></i></div>
+                <div class="iconed-button__text">Посмотреть сайт</div></a></div>
+          </div>
+        </div>
+      </div>
+    </script>
+    <script type="text/x-template" id="slider-display"> 
+      <div class="slider__display"><img class="slider__big-pic" src="" alt=""></div>
+    </script>
+    <script type="text/x-template" id="slider-btns">
+      <div class="slider__buttons">
+        <div class="slider__button">
+          <div class="slider__button-container">
+            <div class="slider__button-img-wrap"><img class="slider__button-pic" src="" alt=""></div>
+          </div>
+        </div>
+        <div class="slider__button slider__button_next">
+          <div class="slider__button-container">
+            <div class="slider__button-img-wrap"><img class="slider__button-pic" src="" alt=""></div>
+          </div>
+        </div>
+      </div>
+    </script>
+    <script src="bootloader.bundle.js"></script>
+    <script src="vendor.bundle.js"></script>
+    <script src="works.bundle.js"></script>
+  </body>
+</html>

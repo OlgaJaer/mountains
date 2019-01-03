@@ -12,3 +12,52 @@ mixin socials(mod, mod2)
             li.socials__item
                 a(href=`${item[0]}`, class='socials__link' + mod2)
                   +icon(item[1], 'socials__icon socials__icon--' + mod)
+
+mixin menuWelcome(className)
+  - 
+    var items = [
+    {
+      'link': 'works.html',
+      'name': 'Мои работы'
+    },
+    {
+      'link': 'about.html',
+      'name': 'Обо мне'
+    },
+    {
+      'link': 'blog.html',
+      'name': 'Блог'
+    }
+    ]  
+  nav(class=`menu menu--${className}`)
+    ul(class=`menu__list menu__list--${className}`)
+      each item in items
+        li(class = `menu__item menu__item--${className}`)
+          a(class = `menu__link menu__link--${className}`, href= item.link)= item.name
+
+mixin menu(className)
+  - 
+    var items = [
+    {
+      'link': 'works.html',
+      'name': 'Мои работы'
+    },
+    {
+      'link': 'about.html',
+      'name': 'Обо мне'
+    },
+    {
+      'link': 'blog.html',
+      'name': 'Блог'
+    },
+    {
+      'link': 'index.html',
+      'name': 'Авторизация'
+    }
+    ]  
+  nav(class=`menu menu--${className}`)
+    ul(class=`menu__list menu__list--${className}`)
+      each item in items
+        li(class = `menu__item menu__item--${className}`)
+          a(class = `menu__link menu__link--${className}`, href = item.link)= item.name
+
