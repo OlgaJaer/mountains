@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "title" : "Коворкинг Воркадиум",
+        "skills" : "Html, Css",
+        "photo" : "/assets/images/content/slider/burger.png",
+        "link" : "//olgajaer.github.io/burgers/"
+    },
+    {
+        "id": 2,
+        "title" : "Лендинг магазина бургеров",
+        "skills" : "Html, Css, JS, Gulp",
+        "photo" : "/assets/images/content/slider/workadium.png",
+        "link" : "//olgajaer.github.io/Coworking/"
+    },
+    {
+        "id": 3,
+        "title" : "Сайт-портфолио",
+        "skills" : "Html, Css, JS, Vue, Pug",
+        "photo" : "/assets/images/content/slider/portfolio.png",
+        "link" : "//olgajaer.github.io/mountains/dist"
+    }  
+]
+  

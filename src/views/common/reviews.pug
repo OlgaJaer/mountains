@@ -1,0 +1,46 @@
+section.reviews
+    .reviews__title
+        +icon('about_header', 'reviews__title-pic')
+        h2.subtitle.subtitle--about-me Что обо мне говорят
+        
+    .reviews__wrapper
+        ul.reviews__list
+            li.reviews__item
+                .reviews__content
+                    +image('titles/quotes.png', 'quotes', 'rewiews__quotes')
+                    .reviews__text Этот девушка проходила обучение веб-разработке не где-то, а в LoftSchool! 3 месяца только самых тяжёлых испытаний и бессонных ночей!
+                .reviews__auth
+                    .reviews__auth-avatar
+                        +image('content/avatar1.png', 'Ковальчук Дмитрий', 'reviews__auth-img')
+                    .reviews__auth-data
+                        .reviews__name Ковальчук Дмитрий
+                        .reviews__position основатель Loftschool
+
+            li.reviews__item
+                .reviews__content
+                    +image('titles/quotes.png', 'quotes', 'rewiews__quotes')
+                    .reviews__text Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах!
+                .reviews__auth
+                    .reviews__auth-avatar
+                        +image('content/avatar2.png', 'Сабанцев Владимир', 'reviews__auth-img')
+                    .reviews__auth-data
+                        .reviews__name Сабанцев Владимир
+                        .reviews__position преподаватель
+    .feedback-container
+        form.feedback__form
+            .feedback__blur-elem
+        
+            .feedback__title
+                .subtitle.subtitle--feedback Связаться со мной
+            .feedback__contact-row
+                input(name='name' placeholder='Имя' required).feedback__text.input__name
+            .feedback__contact-row    
+                input(name='email' placeholder='Email' required).feedback__text.input__email
+            .feedback__contact-row
+                textarea(name="message" placeholder='Ваше сообщение' required).feedback__text.feedback__text--message
+            .feedback__btns
+                button(type="submit").button.button__submit Отправить
+                button(type='reset').button.button__reset Очистить
+    .bottom__arrow
+        button.arrow
+            +icon('portf_arrow_up', 'arrow__down')

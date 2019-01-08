@@ -82,104 +82,7 @@
                 <div class="p">Больше всего меня привлекет Frontend разработка, но я также знакома и могу решать не сложные задачи на Backend. Но давайте по порядку.</div>
               </div>
               <div class="skills__content">
-                <ul class="skills-list">
-                  <li class="skills-list__item skills-row">
-                    <div class="skills-row__title">Frontend</div>
-                    <ul class="skills-row__list">
-                      <li class="skills-row__item">
-                        <figure class="skill" data-percents="70">
-                          <svg class="skill__figure" viewBox="0 0 100 100" preserveAspectRatio="none">
-                            <circle class="skill__circle skill__circle_under" cx="50%" cy="50%" r="40"></circle>
-                            <circle class="skill__circle skill__circle_above" cx="50%" cy="50%" r="40"></circle>
-                          </svg>
-                          <div class="skill__title">Html5   </div>
-                        </figure>
-                      </li>
-                      <li class="skills-row__item">
-                        <figure class="skill" data-percents="70">
-                          <svg class="skill__figure" viewBox="0 0 100 100" preserveAspectRatio="none">
-                            <circle class="skill__circle skill__circle_under" cx="50%" cy="50%" r="40"></circle>
-                            <circle class="skill__circle skill__circle_above" cx="50%" cy="50%" r="40"></circle>
-                          </svg>
-                          <div class="skill__title">css3   </div>
-                        </figure>
-                      </li>
-                      <li class="skills-row__item">
-                        <figure class="skill" data-percents="70">
-                          <svg class="skill__figure" viewBox="0 0 100 100" preserveAspectRatio="none">
-                            <circle class="skill__circle skill__circle_under" cx="50%" cy="50%" r="40"></circle>
-                            <circle class="skill__circle skill__circle_above" cx="50%" cy="50%" r="40"></circle>
-                          </svg>
-                          <div class="skill__title">JavaScript &amp; jQuery   </div>
-                        </figure>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="skills-list__item skills-row">
-                    <div class="skills-row__title">Backend</div>
-                    <ul class="skills-row__list">
-                      <li class="skills-row__item">
-                        <figure class="skill" data-percents="70">
-                          <svg class="skill__figure" viewBox="0 0 100 100" preserveAspectRatio="none">
-                            <circle class="skill__circle skill__circle_under" cx="50%" cy="50%" r="40"></circle>
-                            <circle class="skill__circle skill__circle_above" cx="50%" cy="50%" r="40"></circle>
-                          </svg>
-                          <div class="skill__title">PHP   </div>
-                        </figure>
-                      </li>
-                      <li class="skills-row__item">
-                        <figure class="skill" data-percents="70">
-                          <svg class="skill__figure" viewBox="0 0 100 100" preserveAspectRatio="none">
-                            <circle class="skill__circle skill__circle_under" cx="50%" cy="50%" r="40"></circle>
-                            <circle class="skill__circle skill__circle_above" cx="50%" cy="50%" r="40"></circle>
-                          </svg>
-                          <div class="skill__title">mySQL   </div>
-                        </figure>
-                      </li>
-                      <li class="skills-row__item">
-                        <figure class="skill" data-percents="70">
-                          <svg class="skill__figure" viewBox="0 0 100 100" preserveAspectRatio="none">
-                            <circle class="skill__circle skill__circle_under" cx="50%" cy="50%" r="40"></circle>
-                            <circle class="skill__circle skill__circle_above" cx="50%" cy="50%" r="40"></circle>
-                          </svg>
-                          <div class="skill__title">Node.js &amp; npm   </div>
-                        </figure>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="skills-list__item skills-row">
-                    <div class="skills-row__title">WorkFlow</div>
-                    <ul class="skills-row__list">
-                      <li class="skills-row__item">
-                        <figure class="skill" data-percents="70">
-                          <svg class="skill__figure" viewBox="0 0 100 100" preserveAspectRatio="none">
-                            <circle class="skill__circle skill__circle_under" cx="50%" cy="50%" r="40"></circle>
-                            <circle class="skill__circle skill__circle_above" cx="50%" cy="50%" r="40"></circle>
-                          </svg>
-                          <div class="skill__title">Git   </div>
-                        </figure>
-                      </li>
-                      <li class="skills-row__item">
-                        <figure class="skill" data-percents="70">
-                          <svg class="skill__figure" viewBox="0 0 100 100" preserveAspectRatio="none">
-                            <circle class="skill__circle skill__circle_under" cx="50%" cy="50%" r="40"></circle>
-                            <circle class="skill__circle skill__circle_above" cx="50%" cy="50%" r="40"></circle>
-                          </svg>
-                          <div class="skill__title">Gulp   </div>
-                        </figure>
-                      </li>
-                      <li class="skills-row__item">
-                        <figure class="skill" data-percents="70">
-                          <svg class="skill__figure" viewBox="0 0 100 100" preserveAspectRatio="none">
-                            <circle class="skill__circle skill__circle_under" cx="50%" cy="50%" r="40"></circle>
-                            <circle class="skill__circle skill__circle_above" cx="50%" cy="50%" r="40"></circle>
-                          </svg>
-                          <div class="skill__title">Bower   </div>
-                        </figure>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
+                <div id="skills-component">   </div>
               </div>
             </div>
           </article>
@@ -275,45 +178,71 @@
         </div>
       </footer>
     </div>
+    <script type="text/x-template" id="skills-list">
+      <ul class="skills-list">
+        <li class="skills-list__item" v-for="skillsGroupObj in skills"> 
+          <skills-row :skillsGroupObj="skillsGroupObj"></skills-row>
+        </li>
+      </ul>
+    </script>
+    <script type="text/x-template" id="skills-item"> 
+      <div class="skills-row"> 
+        <div class="skills-row__title">{{skillsGroupObj.skillsGroup}}</div>
+        <ul class="skills-row__list">
+          <li class="skills-row__item" v-for="(skillPercentage, skillTitle) in skillsGroupObj.skills">
+            <skill :skillPercentage="skillPercentage" :skillTitle="skillTitle"></skill>
+          </li>
+        </ul>
+      </div>
+    </script>
+    <script type="text/x-template" id="skill">     
+      <div class="skill">
+        <svg class="skill__figure" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <circle class="skill__circle skill__circle_under" cx="50" cy="50" r="40"></circle>
+          <circle class="skill__circle skill__circle_above" cx="50" cy="50" r="40" ref="circle"></circle>
+        </svg>
+        <div class="skill__title">{{skillTitle}}  </div>
+      </div>
+    </script>
     <script type="text/x-template" id="slider-root">
       <div class="slider-container">
-        <info></info>
-        <display></display>
-        <btns></btns>
+        <info :work="currentWork"></info>
+        <display :work="currentWork"></display>
+        <btns :works="works" :index="currentIndex" @slide="handleSlide"></btns>
       </div>
     </script>
     <script type="text/x-template" id="slider-info">
       <div class="slider__info-container">
         <div class="slider__info">
           <div class="slider__info-title">
-            <div class="subtitle">Залоалоыло</div>
-            <div class="slider__info-skills">One,  two, three</div>
-            <div class="slider__info-button"><a class="iconed-button" href="">
-                <div class="iconed-button__icon"><i class="fa fa-link"></i></div>
-                <div class="iconed-button__text">Посмотреть сайт</div></a></div>
+            <div class="subtitle subtitle--slider">{{work.title}}</div>
+            <div class="slider__info-skills">{{work.skills}}</div>
+            <div class="slider__info-button"><a class="slider__info-link" :href="work.link" target="_blank">
+                <svg class="slider__info-icon">
+                  <use xlink:href="./assets/images/icons/sprite.svg#link"></use>
+                </svg>
+                <div class="slider__info-text">Посмотреть сайт</div></a></div>
           </div>
         </div>
       </div>
     </script>
     <script type="text/x-template" id="slider-display"> 
-      <div class="slider__display"><img class="slider__big-pic" src="" alt=""></div>
+      <div class="slider__display"><img class="slider__big-pic" :src="work.photo" alt=""></div>
     </script>
     <script type="text/x-template" id="slider-btns">
       <div class="slider__buttons">
-        <div class="slider__button">
+        <div class="slider__button" @click="slide('prev')">
           <div class="slider__button-container">
-            <div class="slider__button-img-wrap"><img class="slider__button-pic" src="" alt=""></div>
+            <div class="slider__button-img-wrap"><img class="slider__button-pic" :src="prevButtonWorks[index].photo" alt=""></div>
           </div>
         </div>
-        <div class="slider__button slider__button_next">
+        <div class="slider__button slider__button_next" @click="slide('next')">
           <div class="slider__button-container">
-            <div class="slider__button-img-wrap"><img class="slider__button-pic" src="" alt=""></div>
+            <div class="slider__button-img-wrap"><img class="slider__button-pic" :src="nextButtonWorks[index].photo" alt=""></div>
           </div>
         </div>
       </div>
     </script>
-    <script src="bootloader.bundle.js"></script>
-    <script src="vendor.bundle.js"></script>
     <script src="about.bundle.js"></script>
   </body>
 </html>

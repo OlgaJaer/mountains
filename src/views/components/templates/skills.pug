@@ -1,19 +1,29 @@
-- 
+//- 
     var skills = [
         ['Frontend', [['Html5', 30], ['css3', 50], ['JavaScript & jQuery', 70]]],
         ['Backend', [['PHP', 30], ['mySQL', 50], ['Node.js & npm', 70]]],
         ['WorkFlow', [['Git', 30], ['Gulp', 50], ['Bower', 20]]],
     ]
+script(type="text/x-template")#skills-list
+    ul.skills-list
+        li.skills-list__item(v-for="skillsGroupObj in skills") 
+            skills-row(
+                :skillsGroupObj="skillsGroupObj"
+            )
 
-ul.skills-list
-    each skillsrow in skills
-        li.skills-list__item.skills-row
-            .skills-row__title #{skillsrow[0]}
-            ul.skills-row__list
-                each skill in skillsrow[1]
-                    li.skills-row__item
-                        figure.skill(data-percents="70")
-                            svg(viewBox="0 0 100 100" preserveAspectRatio="none").skill__figure
-                                circle(cx="50%" cy="50%" r="40").skill__circle.skill__circle_under
-                                circle(cx="50%" cy="50%" r="40").skill__circle.skill__circle_above
-                            .skill__title #{skill[0]}   
+script(type="text/x-template")#skills-item  
+    .skills-row 
+        .skills-row__title {{skillsGroupObj.skillsGroup}}
+        ul.skills-row__list
+            li.skills-row__item(v-for="(skillPercentage, skillTitle) in skillsGroupObj.skills")
+                skill(
+                    :skillPercentage="skillPercentage"
+                    :skillTitle="skillTitle"
+                )
+
+script(type="text/x-template")#skill      
+    .skill
+        svg(viewBox="0 0 100 100" preserveAspectRatio="none").skill__figure
+            circle(cx="50" cy="50" r="40").skill__circle.skill__circle_under
+            circle(cx="50" cy="50" r="40" ref="circle").skill__circle.skill__circle_above
+        .skill__title {{skillTitle}}  

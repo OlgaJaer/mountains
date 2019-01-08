@@ -1,0 +1,141 @@
+.feedback-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 180px;
+
+    @include phones {
+        margin-bottom: 120px;
+    }
+}
+
+.feedback__form {
+    //background: rgba(#fff, 0.85);
+    position: relative;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+}
+
+
+
+.feedback__blur {
+    position: relative;
+    // overflow: hidden;
+    // border-radius: 5px;
+
+}
+
+.feedback__blur-elem {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('./assets/images/bg/water.jpg') center no-repeat;
+    width: 100%;
+    height: 100%;
+    background-position: -360px -388px;
+    background-size: 948px;
+    filter: blur(10px);
+}
+
+.feedback_form {
+    width: 380px;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    padding: 0 20px;
+
+    @include phones {
+        width: 300px;
+    }
+}
+
+.feedback__title {
+    margin-top: 39px;
+    margin-bottom: 30px;
+    max-width: 380px;
+    display: flex;
+    justify-content: center;
+}
+
+.feedback__contact-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 100%;
+    position: relative;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+.feedback__text {
+    width: 340px;
+    border-radius: 5px;
+    padding: 15px 20px;
+    border: 1px solid white;
+
+    &:focus {
+        outline: transparent;
+        border: 1px solid $green;
+    }
+
+    @include phones {
+        width: 280px;
+    }
+    
+    &--message {
+        height: 140px;
+        resize: none;
+    }
+}
+
+.feedback__btns {
+    width: 100%;
+    display: flex;
+    z-index: 2;
+}
+
+.button__submit,
+.button__reset {
+    width: 50%;
+    text-align: center;
+    cursor: pointer;
+    background: rgba($green, 0.6);
+    color: white;
+    border-radius: 0;
+
+    &:hover {
+        background: $green;
+    }
+}
+
+.button__submit {
+    border-bottom-left-radius: 5px;
+}
+
+.button__reset {
+    border-bottom-right-radius: 5px;
+}
+
+.button {
+    padding: 14px 18px;
+    border-right: rgba(222, 227, 231, 0.5) 2px solid;
+
+    &:last-child {
+        border: none;
+    }
+}

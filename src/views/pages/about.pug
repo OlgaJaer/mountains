@@ -34,16 +34,16 @@ block content
         .skills__small-desc
           .p Больше всего меня привлекет Frontend разработка, но я также знакома и могу решать не сложные задачи на Backend. Но давайте по порядку.
         .skills__content
-         
+          #skills-component    
 
-          - 
+          //- 
             var skills = [
               ['Frontend', [['Html5', 30], ['css3', 50], ['JavaScript & jQuery', 70]]],
               ['Backend', [['PHP', 30], ['mySQL', 50], ['Node.js & npm', 70]]],
               ['WorkFlow', [['Git', 30], ['Gulp', 50], ['Bower', 20]]],
             ]
 
-          ul.skills-list
+          //-ul.skills-list
             each skillsrow in skills
               li.skills-list__item.skills-row
                 .skills-row__title #{skillsrow[0]}

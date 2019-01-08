@@ -1,33 +1,43 @@
 script(type="text/x-template")#slider-root
     .slider-container
-        info
-        display
-        btns
+        info(
+            :work="currentWork"
+        )
+        display(
+            :work="currentWork"
+        )
+        btns(
+            :works="works",
+            :index="currentIndex",
+            @slide="handleSlide"
+        )
 
 script(type="text/x-template")#slider-info
     .slider__info-container
         .slider__info
             .slider__info-title
-                .subtitle Залоалоыло
-                .slider__info-skills One,  two, three
+                .subtitle.subtitle--slider {{work.title}}
+                .slider__info-skills {{work.skills}}
                 .slider__info-button
-                    a(href="").iconed-button
-                        .iconed-button__icon
-                            i.fa.fa-link
-                        .iconed-button__text Посмотреть сайт
+                    a(:href="work.link" target="_blank").slider__info-link
+                        svg(class="slider__info-icon")
+                            use(xlink:href='./assets/images/icons/sprite.svg#link')
+                        .slider__info-text Посмотреть сайт
 
 script(type="text/x-template")#slider-display 
     .slider__display
-        img(src="", alt="").slider__big-pic
+        img(:src="work.photo", alt="").slider__big-pic
 
 
 script(type="text/x-template")#slider-btns
     .slider__buttons
-        .slider__button()
+        .slider__button(@click="slide('prev')")
             .slider__button-container
                 .slider__button-img-wrap
-                    img(src="", alt="").slider__button-pic
-        .slider__button.slider__button_next()
+
+                    img(:src="prevButtonWorks[index].photo", alt="").slider__button-pic
+        .slider__button.slider__button_next(@click="slide('next')")
             .slider__button-container
                 .slider__button-img-wrap()
-                    img(src="", alt="").slider__button-pic                    
+                    
+                    img(:src="nextButtonWorks[index].photo", alt="").slider__button-pic                    
