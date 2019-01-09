@@ -3,7 +3,7 @@ mixin icon(iconName, iconClass)
     use(xlink:href=`./assets/images/icons/sprite.svg#${iconName}`)
 
 mixin image(imagePath, imageAlt, imageClass)
-  img(src=`/assets/images/${imagePath}`, alt=`${imageAlt}`, class=`${imageClass}`)
+  img(src=`./assets/images/${imagePath}`, alt=`${imageAlt}`, class=`${imageClass}`)
 
 mixin socials(mod, mod2)
  - var socials = [['https://vk.com/olga_volcano', "vk"],['https://github.com/OlgaJaer', "github"], ['http://in.com', 'in']]

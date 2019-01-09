@@ -5,6 +5,8 @@
 }
 
 .slider {
+    //background: #faf8f0;
+
     &__title {
         position: relative;
         text-align: center;
@@ -27,15 +29,15 @@
 
 .slider-container {
     height: 100vh;
-    min-height: 650px;
+    min-height: 600px;
     background: #f0efe9;
     display: grid;
     grid-template:
-        "info display"70% "info btns"30% / 1fr 1fr;
+        "info display"75% "info btns"25% / 1fr 1fr;
 
     @include tablets {
         grid-template:
-            "display"500px "info"200px "buttons"200px / 1fr;
+            "display"40% "info"40% "btns"20% / 1fr;
     }
 }
 
@@ -81,6 +83,7 @@
 }
 
 .slider__buttons {
+    width: 100%;
     grid-area: btns;
     display: flex;
     overflow: hidden;
