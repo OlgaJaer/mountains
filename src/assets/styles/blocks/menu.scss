@@ -1,49 +1,145 @@
 .menu {
     color: white;
+
+
+    &__list {
+        display: flex;
+
+        &--welcome {
+            justify-content: space-around;
+        }
+    }
+
+    &__item {
+        &--footer {
+            margin-right: 40px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &:first-child {
+                margin-left: 30px;
+            }
+
+        }
+
+        &--welcome {
+            padding: 15px 31px;
+            background-color: $green;
+            color: #fff;
+
+            &:hover {
+                background-color: $green-hover;
+            }
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $white;
+        transition: 500ms;
+
+        &--footer {
+
+            &:hover {
+                color: $green;
+            }
+        }
+    }
+
 }
 
-.menu__list {
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
     display: flex;
-
-    &--welcome {
-        justify-content: space-around;
-    }
+    text-align: center;
+    justify-content: center;
+    background-color: rgba($green, 0.9);
+    display: none;
+    animation: appear 1s;
 }
 
-.menu__item {
-    &--footer {
-        margin-right: 40px;
-
-        &:last-child {
-            margin-right: 0;
-        }
-
-        &:first-child {
-            margin-left: 30px;
-        }
-
-    }
-
-    &--welcome {
-        padding: 15px 31px;
-        background-color: $green;
-        color: #fff;
-
-        &:hover {
-            background-color: $green-hover;
-        }
-    }
-}
-
-.menu__link {
-    text-decoration: none;
+.menu--popup {
+    height: 100%;
+    font-family: 'bernier';
+    font-size: 63px;
     color: $white;
-    transition: 500ms;
+}
 
-    &--footer {
+.menu__list--popup {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
 
-        &:hover {
-            color: $green;
+.menu__item--popup {
+    margin-bottom: 45px;
+
+    &:nth-child(3) {
+        order: -1;
+    }
+
+    &:nth-child(1) {
+        order: -2;
+    }
+}
+
+.menu__link--popup {
+    text-decoration: none;
+    position: relative;
+
+    &:hover {
+
+        &:before,
+        &:after {
+            content: "";
+            display: inline-block;
+            width: 15px;
+            border: 3px solid $light-grey;
+            position: absolute;
+            top: 50%;
+            transform: translate(0 -50%);
         }
+
+        &:before {
+            left: -30px;
+        }
+
+        &:after {
+            right: -30px;
+
+        }
+    }
+
+    @include phones {
+        font-size: 45px;
+    }
+}
+
+.popup__btn {
+    position: fixed;
+    top: 2%;
+    right: 2%;
+    cursor: pointer;
+}
+
+.popup__close {
+    fill: $white;
+    width: 40px;
+    height: 40px;
+
+    @include phones {
+        width: 20px;
+        height: 20px;
     }
 }
