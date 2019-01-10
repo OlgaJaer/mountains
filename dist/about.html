@@ -87,49 +87,50 @@
             </div>
           </article>
         </section>
-        <section class="map">
-          <div class="map-img">
-            <div class="contacts">
-              <div class="contacts__title">
-                <h3 class="subtitle">Контакты</h3>
-              </div>
-              <address class="contacts__info">
-                <ul class="contacts__list">
-                  <li class="contacts__item">
-                    <div class="contacts__icon">
-                      <svg class="contacts__icon-img">
-                        <use xlink:href="./assets/images/icons/sprite.svg#skype"></use>
-                      </svg>
-                    </div>
-                    <div class="contacts__desc">olgar.mamaeva</div>
-                  </li>
-                  <li class="contacts__item">
-                    <div class="contacts__icon">
-                      <svg class="contacts__icon-img">
-                        <use xlink:href="./assets/images/icons/sprite.svg#envelope"></use>
-                      </svg>
-                    </div>
-                    <div class="contacts__desc">olgar.mamaeva@rambler.ru</div>
-                  </li>
-                  <li class="contacts__item">
-                    <div class="contacts__icon">
-                      <svg class="contacts__icon-img">
-                        <use xlink:href="./assets/images/icons/sprite.svg#phone"></use>
-                      </svg>
-                    </div>
-                    <div class="contacts__desc">+7 (903) 355-96-53</div>
-                  </li>
-                  <li class="contacts__item">
-                    <div class="contacts__icon">
-                      <svg class="contacts__icon-img">
-                        <use xlink:href="./assets/images/icons/sprite.svg#map_marker"></use>
-                      </svg>
-                    </div>
-                    <div class="contacts__desc">Башкортостан, г.Уфа</div>
-                  </li>
-                </ul>
-              </address>
+        <section class="contacts">
+          <div class="contacts__map" id="map">
+            <!--iframe.contacts__map-img(src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d18413.0662027026!2d56.01269136656636!3d54.76883427858835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sde!4v1547118052692" width="600" height="450" frameborder="0" style="border:0" allowfullscreen)-->
+          </div>
+          <div class="contacts-wrapper">
+            <div class="contacts__title"> 
+              <h3 class="subtitle">Контакты</h3>
             </div>
+            <address class="contacts__info">
+              <ul class="contacts__list">
+                <li class="contacts__item">
+                  <div class="contacts__icon">
+                    <svg class="contacts__icon-img">
+                      <use xlink:href="./assets/images/icons/sprite.svg#skype"></use>
+                    </svg>
+                  </div>
+                  <div class="contacts__desc">olgar.mamaeva</div>
+                </li>
+                <li class="contacts__item">
+                  <div class="contacts__icon">
+                    <svg class="contacts__icon-img">
+                      <use xlink:href="./assets/images/icons/sprite.svg#envelope"></use>
+                    </svg>
+                  </div>
+                  <div class="contacts__desc">olgar.mamaeva@rambler.ru</div>
+                </li>
+                <li class="contacts__item">
+                  <div class="contacts__icon">
+                    <svg class="contacts__icon-img">
+                      <use xlink:href="./assets/images/icons/sprite.svg#phone"></use>
+                    </svg>
+                  </div>
+                  <div class="contacts__desc">+7 (903) 355-96-53</div>
+                </li>
+                <li class="contacts__item">
+                  <div class="contacts__icon">
+                    <svg class="contacts__icon-img">
+                      <use xlink:href="./assets/images/icons/sprite.svg#map_marker"></use>
+                    </svg>
+                  </div>
+                  <div class="contacts__desc">Башкортостан, г.Уфа</div>
+                </li>
+              </ul>
+            </address>
           </div>
         </section>
       </div>
@@ -258,6 +259,7 @@
         </ul>
       </nav>
     </div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQJeZ8eNHtX3FgXKNqzhbPfyIfrWe5Atg&amp;callback=initMap" async defer></script>
     <script src="about.bundle.js"></script>
   </body>
 </html>
