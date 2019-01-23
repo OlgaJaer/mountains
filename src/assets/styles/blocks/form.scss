@@ -1,0 +1,143 @@
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: centesr;
+    align-items: center;
+
+
+    &__row {
+        position: relative;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    &__input-icon {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        left: 5%;
+        z-index: 1;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        height: 38px;
+        width: 40px;
+        background-color: $beige;
+    }
+
+    &__icon-login,
+    &__icon-password {
+        fill: $grey;
+        width: 50%;
+        height: 50%;
+    }
+
+    &__login-control {
+        width: 90%;
+        border: none;
+        border-radius: 5px;
+        margin: auto;
+        padding: 10px 15px 10px 50px;
+        position: relative;
+        background: #fff;
+    }
+
+    &__checkbox {
+        margin-bottom: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__checkbox-wrap {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+    }
+
+
+    &__check {
+        display: none;
+    }
+
+    &__check-fake {
+        width: 17px;
+        height: 17px;
+        padding: 3px;
+        background-color: #fff;
+        border: 1px solid rgba($light-grey, 0.7);
+        border-radius: 2px;
+        box-shadow: 1px 1px 3px rgba($grey, 0.5);
+        margin-right: 10px;
+        fill: transparent;
+    }
+
+    &__check {
+        &:checked~.form__check-fake {
+            transition: 300ms;
+            background-color: $green;
+            fill: $white;
+        }
+    }
+
+    &__question {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+        &-text {
+            flex: 1;
+            margin-bottom: 10px;
+        }
+
+        &-wrap {
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+            margin-right: 40px;
+            cursor: pointer;
+        }
+
+        &-btns {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__radio {
+        display: none;
+
+
+
+        &-fake {
+            display: block;
+            width: 17px;
+            height: 17px;
+            background-color: $white;
+            border: 1px solid rgba($grey, 0.5);
+            border-radius: 50%;
+            margin-right: 7px;
+            position: relative;
+
+            &:before {
+                content: "";
+                display: block;
+                width: 7px;
+                height: 7px;
+                border-radius: 50%;
+                @include center;
+            }
+        }
+    }
+
+&__radio {
+        &:checked~.form__radio-fake:before {
+            background-color: $green;
+            transition: 0.5s;
+        }
+    }
+}

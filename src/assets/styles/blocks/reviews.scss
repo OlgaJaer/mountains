@@ -17,6 +17,7 @@
     align-items: center;
     height: 170px;
     position: relative;
+
     &-pic {
         fill: #f0eee7;
         width: 499px;
@@ -90,10 +91,17 @@
     }
 }
 
-.rewiews__quot-img {
+.reviews__quotes {
     max-width: 33px;
     max-height: 29px;
     margin-bottom: 29px;
+
+    &-pic {
+        width: 33px;
+        height: 29px;
+        background: url('./assets/images/titles/quotes.png') center center / cover no-repeat;
+    }
+
 
     @include phones {
         margin-bottom: 5px;

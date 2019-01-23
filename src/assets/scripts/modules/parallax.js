@@ -4,7 +4,7 @@ const layers = Array.from(parallaxContainer.children);
 const moveLayers = e => {
     const initialX = (window.innerWidth / 2) - e.pageX;
     const initialY = (window.innerHeight / 2) - e.pageY;
-
+    console.log(e);
     layers.forEach((layer, i) => {
         const divider = i / 180;
         const positionX = initialX * divider;

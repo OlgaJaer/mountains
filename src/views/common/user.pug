@@ -1,12 +1,26 @@
-.user
+.user.user--front
     .user__container
         .user__pic
-            +image('content/me-square.jpg', 'user pic', 'user__pic-img')
+            +image('content/me-square.jpg', 'user picture', 'user__pic-img')
         .user__info
             h1.user__name Ольга Егер
             h2.user__desc Личный сайт веб разработчика 
         .user__social
             +socials('block')
 
-        .user__pages
-            +menuWelcome('welcome')
+    .user__pages
+        +menuWelcome('welcome')
+    
+.user.user--back
+    .user__container
+        h1.user__title
+            .subtitle.subtitle--auth Авторизуйтесь
+        .user__form
+            form.form
+                include ../common/form
+                
+                     
+    .user__pages
+        nav.user__btns
+            button.user__page.js-back-to-main(type='button') На главную
+            button.user__page(type='button' method="POST") Войти

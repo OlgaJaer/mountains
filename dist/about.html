@@ -28,13 +28,19 @@
                     </svg></a></li>
               </ul>
             </div>
-            <div class="header__menu"><a class="hamburger" href="">
-                <div class="hamburger__planks"></div></a></div>
-            <div class="header__content"><img class="title-img" src="./assets/images/titles/portfolio_header.png" alt="page title"/>
+            <div class="header__menu">
+              <button class="hamburger" type="button">
+                <div class="hamburger__planks"></div>
+              </button>
+            </div>
+            <div class="header__bg"><img class="header__title-img" src="./assets/images/titles/portfolio_header.png" alt="page title"/>
+            </div>
+            <div class="header__content">
+              <!--+image('titles/portfolio_header.png', 'page title', 'header__title-img')-->
               <div class="header__user-desc">
                 <div class="user">
                   <div class="user__container">
-                    <div class="user__pic"><img class="user__pic-img" src="./assets/images/content/me-square.jpg" alt="user pic"/>
+                    <div class="user__pic"><img class="user__pic-img" src="./assets/images/content/me-square.jpg" alt="user picture"/>
                     </div>
                     <div class="user__info"> 
                       <h2 class="user__name">Ольга Егер</h2>
@@ -45,7 +51,7 @@
               </div>
             </div>
             <div class="header__btn">
-              <button class="arrow">
+              <button class="arrow" type="button">
                 <svg class="arrow__down">
                   <use xlink:href="./assets/images/icons/sprite.svg#arrow_down"></use>
                 </svg>
@@ -61,11 +67,11 @@
               </div>
               <div class="skills__user-info">
                 <div class="user-desc">
-                  <div class="user-desc__pic"><img class="user-desc__pic-img" src="./assets/images/content/me.jpg" alt="user"></div>
+                  <div class="user-desc__pic"><img class="user-desc__pic-img" src="./assets/images/content/me.jpg" alt="user picture"></div>
                   <div class="user-desc__info">
-                    <h2 class="user-desc__title">
-                      <h3 class="subtitle subtitle--who">Кто я</h3>
-                    </h2>
+                    <div class="user-desc__title">
+                      <h2 class="subtitle subtitle--who">Кто я</h2>
+                    </div>
                     <div class="user-desc__text">
                       <p>Я веб разработчик из Уфы. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.</p>
                       <p>Этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!</p>
@@ -76,7 +82,7 @@
             </div>
             <div class="skills__block skills__block--achievements">
               <div class="skills__right-title">
-                <div class="subtitle subtitle--use">Чем я могу быть вам полезна</div>
+                <h2 class="subtitle subtitle--use">Чем я могу быть вам полезна</h2>
               </div>
               <div class="skills__small-desc">
                 <div class="p">Больше всего меня привлекет Frontend разработка, но я также знакома и могу решать не сложные задачи на Backend. Но давайте по порядку.</div>
@@ -88,9 +94,7 @@
           </article>
         </section>
         <section class="contacts">
-          <div class="contacts__map" id="map">
-            <!--iframe.contacts__map-img(src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d18413.0662027026!2d56.01269136656636!3d54.76883427858835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sde!4v1547118052692" width="600" height="450" frameborder="0" style="border:0" allowfullscreen)-->
-          </div>
+          <div class="contacts__map" id="map"></div>
           <div class="contacts-wrapper">
             <div class="contacts__title"> 
               <h3 class="subtitle">Контакты</h3>
@@ -102,32 +106,28 @@
                     <svg class="contacts__icon-img">
                       <use xlink:href="./assets/images/icons/sprite.svg#skype"></use>
                     </svg>
-                  </div>
-                  <div class="contacts__desc">olgar.mamaeva</div>
+                  </div><a class="contacts__desc" href="skype:olgar.mamaeva">olgar.mamaeva</a>
                 </li>
                 <li class="contacts__item">
                   <div class="contacts__icon">
                     <svg class="contacts__icon-img">
                       <use xlink:href="./assets/images/icons/sprite.svg#envelope"></use>
                     </svg>
-                  </div>
-                  <div class="contacts__desc">olgar.mamaeva@rambler.ru</div>
+                  </div><a class="contacts__desc" href="mailto:olgar.mamaeva@rambler.ru">olgar.mamaeva@rambler.ru</a>
                 </li>
                 <li class="contacts__item">
                   <div class="contacts__icon">
                     <svg class="contacts__icon-img">
                       <use xlink:href="./assets/images/icons/sprite.svg#phone"></use>
                     </svg>
-                  </div>
-                  <div class="contacts__desc">+7 (903) 355-96-53</div>
+                  </div><a class="contacts__desc" href="tel:+79033559653">+7 (903) 355-96-53</a>
                 </li>
                 <li class="contacts__item">
                   <div class="contacts__icon">
                     <svg class="contacts__icon-img">
                       <use xlink:href="./assets/images/icons/sprite.svg#map_marker"></use>
                     </svg>
-                  </div>
-                  <div class="contacts__desc">Башкортостан, г.Уфа</div>
+                  </div><a class="contacts__desc" href="https://goo.gl/maps/N5osXoouZHS2">Башкортостан, г.Уфа</a>
                 </li>
               </ul>
             </address>
@@ -188,7 +188,7 @@
     </script>
     <script type="text/x-template" id="skills-item"> 
       <div class="skills-row"> 
-        <div class="skills-row__title">{{skillsGroupObj.skillsGroup}}</div>
+        <h3 class="skills-row__title">{{skillsGroupObj.skillsGroup}}</h3>
         <ul class="skills-row__list">
           <li class="skills-row__item" v-for="(skillPercentage, skillTitle) in skillsGroupObj.skills">
             <skill :skillPercentage="skillPercentage" :skillTitle="skillTitle"></skill>
@@ -202,7 +202,7 @@
           <circle class="skill__circle skill__circle_under" cx="50" cy="50" r="40"></circle>
           <circle class="skill__circle skill__circle_above" cx="50" cy="50" r="40" ref="circle"></circle>
         </svg>
-        <div class="skill__title">{{skillTitle}}  </div>
+        <h4 class="skill__title">{{skillTitle}}  </h4>
       </div>
     </script>
     <script type="text/x-template" id="slider-root">
@@ -228,20 +228,20 @@
       </div>
     </script>
     <script type="text/x-template" id="slider-display"> 
-      <div class="slider__display"><img class="slider__big-pic" :src="work.photo" alt=""></div>
+      <div class="slider__display"><img class="slider__big-pic" :src="work.photo" alt="my work"></div>
     </script>
     <script type="text/x-template" id="slider-btns">
       <div class="slider__buttons">
-        <div class="slider__button" @click="slide('prev')">
+        <button class="slider__button" @click="slide('prev')" type="button">
           <div class="slider__button-container">
-            <div class="slider__button-img-wrap"><img class="slider__button-pic" :src="prevButtonWorks[index].photo" alt=""></div>
+            <div class="slider__button-img-wrap"><img class="slider__button-pic" :src="prevButtonWorks[index].photo" alt="my work"></div>
           </div>
-        </div>
-        <div class="slider__button slider__button_next" @click="slide('next')">
+        </button>
+        <button class="slider__button slider__button_next" @click="slide('next')" type="button">
           <div class="slider__button-container">
-            <div class="slider__button-img-wrap"><img class="slider__button-pic" :src="nextButtonWorks[index].photo" alt=""></div>
+            <div class="slider__button-img-wrap"><img class="slider__button-pic" :src="nextButtonWorks[index].photo" alt="my work"></div>
           </div>
-        </div>
+        </button>
       </div>
     </script>
     <div class="popup">

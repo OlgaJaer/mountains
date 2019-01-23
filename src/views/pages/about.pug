@@ -23,16 +23,16 @@ block content
         .skills__user-info
           .user-desc
             .user-desc__pic
-              img(src="./assets/images/content/me.jpg", alt="user").user-desc__pic-img
+              img(src="./assets/images/content/me.jpg", alt="user picture").user-desc__pic-img
             .user-desc__info
-              h2.user-desc__title
-                h3.subtitle.subtitle--who Кто я
+              .user-desc__title
+                h2.subtitle.subtitle--who Кто я
               .user-desc__text
                 p Я веб разработчик из Уфы. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
                 p Этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
       .skills__block.skills__block--achievements
         .skills__right-title
-          .subtitle.subtitle--use Чем я могу быть вам полезна
+          h2.subtitle.subtitle--use Чем я могу быть вам полезна
         .skills__small-desc
           .p Больше всего меня привлекет Frontend разработка, но я также знакома и могу решать не сложные задачи на Backend. Но давайте по порядку.
         .skills__content
@@ -60,7 +60,7 @@ block content
 
   section.contacts
     .contacts__map#map
-      //iframe.contacts__map-img(src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d18413.0662027026!2d56.01269136656636!3d54.76883427858835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sde!4v1547118052692" width="600" height="450" frameborder="0" style="border:0" allowfullscreen)
+      
     .contacts-wrapper
       .contacts__title 
         h3.subtitle Контакты
@@ -68,14 +68,14 @@ block content
         ul.contacts__list
           - 
             var contacts = [
-              ['skype', 'olgar.mamaeva'],
-              ['envelope', 'olgar.mamaeva@rambler.ru'],
-              ['phone', '+7 (903) 355-96-53'],
-              ['map_marker', 'Башкортостан, г.Уфа']
+              ['skype', 'olgar.mamaeva', 'skype:olgar.mamaeva'],
+              ['envelope', 'olgar.mamaeva@rambler.ru', 'mailto:olgar.mamaeva@rambler.ru'],
+              ['phone', '+7 (903) 355-96-53', 'tel:+79033559653'],
+              ['map_marker', 'Башкортостан, г.Уфа', 'https://goo.gl/maps/N5osXoouZHS2']
             ]
           each item in contacts
             li.contacts__item
               .contacts__icon
                 +icon(`${item[0]}`, 'contacts__icon-img')
-              .contacts__desc #{item[1]}
+              a.contacts__desc(href=`${item[2]}`) #{item[1]}
 

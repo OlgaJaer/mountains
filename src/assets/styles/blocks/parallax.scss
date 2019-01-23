@@ -17,5 +17,10 @@
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
+        bottom: -10%;
+        width: 110%;
+        &--back {
+            height: 110%;
+        }
     }
 }

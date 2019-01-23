@@ -16,11 +16,9 @@
 }
 
 .bottom__arrow {
-    width: 30px;
     height: 30px;
-    position: absolute;
-    bottom: 70px;
-    left: 50%;
-    transform: translate(-50%, 0);
+    display: flex;
+    justify-content: center;
+    margin-bottom: 200px;
 }
 

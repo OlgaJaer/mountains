@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 180px;
+    margin-bottom: 70px;
 
     @include phones {
         margin-bottom: 120px;
@@ -21,12 +21,8 @@
     border-radius: 5px;
 }
 
-
-
 .feedback__blur {
     position: relative;
-    // overflow: hidden;
-    // border-radius: 5px;
 
 }
 
@@ -36,11 +32,13 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('./assets/images/bg/water.jpg') center no-repeat;
+    background-image: url(./assets/images/bg/water.jpg);
+    background-repeat: no-repeat;
     width: 100%;
     height: 100%;
-    background-position: -360px -388px;
-    background-size: 948px;
+    //background-position: -360px -388px;
+    // background-size: 948px;
+    background-size: cover;
     filter: blur(10px);
 }
 
@@ -96,7 +94,7 @@
     @include phones {
         width: 280px;
     }
-    
+
     &--message {
         height: 140px;
         resize: none;

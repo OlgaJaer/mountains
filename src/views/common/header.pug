@@ -10,21 +10,23 @@ header.header
               +icon(social, "socials__icon")
 
         .header__menu
-            a(href="").hamburger
+            button.hamburger(type="button")
                 .hamburger__planks
 
+        .header__bg
+            +image('titles/portfolio_header.png', 'page title', 'header__title-img')
         .header__content
-            +image('titles/portfolio_header.png', 'page title', 'title-img')
+            //+image('titles/portfolio_header.png', 'page title', 'header__title-img')
       
             .header__user-desc
                 .user
                     .user__container
                         .user__pic
-                            +image('content/me-square.jpg', 'user pic', 'user__pic-img')
+                            +image('content/me-square.jpg', 'user picture', 'user__pic-img')
                         .user__info 
                             h2.user__name Ольга Егер
                             h3.user__desc Личный сайт веб разработчика 
 
         .header__btn
-            button.arrow
+            button.arrow(type="button")
                 +icon('arrow_down', 'arrow__down')

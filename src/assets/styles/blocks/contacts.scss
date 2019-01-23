@@ -40,4 +40,7 @@
   
   .contacts__desc {
     margin-left: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    color: $text-color;
   }

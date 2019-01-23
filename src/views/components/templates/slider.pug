@@ -26,18 +26,18 @@ script(type="text/x-template")#slider-info
 
 script(type="text/x-template")#slider-display 
     .slider__display
-        img(:src="work.photo", alt="").slider__big-pic
+        img(:src="work.photo", alt="my work").slider__big-pic
 
 
 script(type="text/x-template")#slider-btns
     .slider__buttons
-        .slider__button(@click="slide('prev')")
+        button.slider__button(@click="slide('prev')" type="button")
             .slider__button-container
                 .slider__button-img-wrap
 
-                    img(:src="prevButtonWorks[index].photo", alt="").slider__button-pic
-        .slider__button.slider__button_next(@click="slide('next')")
+                    img(:src="prevButtonWorks[index].photo", alt="my work").slider__button-pic
+        button.slider__button.slider__button_next(@click="slide('next')" type="button")
             .slider__button-container
                 .slider__button-img-wrap()
                     
-                    img(:src="nextButtonWorks[index].photo", alt="").slider__button-pic                    
+                    img(:src="nextButtonWorks[index].photo", alt="my work").slider__button-pic                    

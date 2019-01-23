@@ -7,7 +7,8 @@ section.reviews
         ul.reviews__list
             li.reviews__item
                 .reviews__content
-                    +image('titles/quotes.png', 'quotes', 'rewiews__quotes')
+                    .reviews__quotes
+                        .reviews__quotes-pic
                     .reviews__text Этот девушка проходила обучение веб-разработке не где-то, а в LoftSchool! 3 месяца только самых тяжёлых испытаний и бессонных ночей!
                 .reviews__auth
                     .reviews__auth-avatar
@@ -18,7 +19,8 @@ section.reviews
 
             li.reviews__item
                 .reviews__content
-                    +image('titles/quotes.png', 'quotes', 'rewiews__quotes')
+                    .reviews__quotes
+                        .reviews__quotes-pic
                     .reviews__text Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах!
                 .reviews__auth
                     .reviews__auth-avatar
@@ -42,5 +44,5 @@ section.reviews
                 button(type="submit").button.button__submit Отправить
                 button(type='reset').button.button__reset Очистить
     .bottom__arrow
-        button.arrow
+        button.arrow(type="button")
             +icon('portf_arrow_up', 'arrow__down')

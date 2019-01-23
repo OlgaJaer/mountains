@@ -1,0 +1,27 @@
+.form__row
+    .form__input-icon
+        +icon('login', 'form__icon-login')
+                    
+    input.form__login-control(type='text' placeholder='Логин' name='login')
+.form__row
+    .form__input-icon
+        +icon('password', 'form__icon-password')
+                    
+    input.form__login-control(type='password' placeholder='Пароль' name='password')
+.form__checkbox
+    label.form__checkbox-wrap
+        input.form__check(type='checkbox' name='human' checked)
+        +icon('check', 'form__check-fake')
+        span.form__check-text Я человек
+     
+.form__question 
+    span.form__question-text Вы точно не робот?
+    .form__question-btns
+        label.form__question-wrap(for="yes")
+            input.form__radio(type='radio', name='robot' value='yes' id='yes')
+            .form__radio-fake
+            span.form__radio-text Да
+        label.form__question-wrap(for="no")
+            input.form__radio(type='radio', name='robot' value='no' id='no')
+            .form__radio-fake
+            span.form__radio-text Не уверен  

@@ -8,25 +8,35 @@
     <link rel="stylesheet" href="main.min.css">
   </head>
   <body>
+    <div class="preloader"><img class="preloader__img" src="./assets/images/bg/preloader-bg.jpg" alt="mountains">
+      <ul class="preloader__spin">
+        <li class="preloader__item"></li>
+        <li class="preloader__item"></li>
+        <li class="preloader__item"></li>
+      </ul>
+      <div class="preloader__text"><span class="preloader__num">0</span><span class="preloader__per"> %</span></div>
+    </div>
     <div class="wrapper">
       <div class="welcome">
         <div class="parallax">
-          <div class="parallax__layer"><img class="parallax__img" src="./assets/images/parallax/Layer_5.png" alt="mountains"></div>
-          <div class="parallax__layer"><img class="parallax__img" src="./assets/images/parallax/Layer_8.png" alt="mountains"></div>
-          <div class="parallax__layer"><img class="parallax__img" src="./assets/images/parallax/Layer_7.png" alt="mountains"></div>
-          <div class="parallax__layer"><img class="parallax__img" src="./assets/images/parallax/cloud_PNG4.png" alt="mountains"></div>
-          <div class="parallax__layer"><img class="parallax__img" src="./assets/images/parallax/Layer_6.png" alt="mountains"></div>
-          <div class="parallax__layer"><img class="parallax__img" src="./assets/images/parallax/Layer_4.png" alt="mountains"></div>
-          <div class="parallax__layer"><img class="parallax__img" src="./assets/images/parallax/sky.png" alt="mountains"></div>
-          <div class="parallax__layer"><img class="parallax__img" src="./assets/images/parallax/Layer_1.png" alt="mountains"></div>
+          <div class="parallax__layer"><img class="parallax__img parallax__img--back" src="./assets/images/parallax/Layer_5.png" alt="mountains"></div>
+          <div class="parallax__layer"><img class="parallax__img" src="./assets/images/parallax/Layer_8.png" role="presentation"></div>
+          <div class="parallax__layer"><img class="parallax__img" src="./assets/images/parallax/Layer_7.png" role="presentation"></div>
+          <div class="parallax__layer"><img class="parallax__img" src="./assets/images/parallax/cloud_PNG4.png" role="presentation"></div>
+          <div class="parallax__layer"><img class="parallax__img" src="./assets/images/parallax/Layer_6.png" role="presentation"></div>
+          <div class="parallax__layer"><img class="parallax__img" src="./assets/images/parallax/Layer_4.png" role="presentation"></div>
+          <div class="parallax__layer"><img class="parallax__img" src="./assets/images/parallax/sky.png" role="presentation"></div>
+          <div class="parallax__layer"><img class="parallax__img" src="./assets/images/parallax/Layer_2.png" role="presentation"></div>
+          <div class="parallax__layer"><img class="parallax__img" src="./assets/images/parallax/Layer_1.png" role="presentation"></div>
+          <div class="parallax__layer"><img class="parallax__img" src="./assets/images/parallax/cloud_PNG5.png" role="presentation"></div>
         </div>
         <div class="welcome__btn">
-          <button class="welcome__btn-autoriz">Авторизоваться</button>
+          <button class="welcome__btn-autoriz js-authoriz" type="button">Авторизоваться</button>
         </div>
         <div class="welcome__block">
-          <div class="user">
+          <div class="user user--front">
             <div class="user__container">
-              <div class="user__pic"><img class="user__pic-img" src="./assets/images/content/me-square.jpg" alt="user pic"/>
+              <div class="user__pic"><img class="user__pic-img" src="./assets/images/content/me-square.jpg" alt="user picture"/>
               </div>
               <div class="user__info">
                 <h1 class="user__name">Ольга Егер</h1>
@@ -48,15 +58,68 @@
                       </svg></a></li>
                 </ul>
               </div>
-              <div class="user__pages">
-                <nav class="menu menu--welcome">
-                  <ul class="menu__list menu__list--welcome">
-                    <li class="menu__item menu__item--welcome"><a class="menu__link menu__link--welcome" href="works.html">Мои работы</a></li>
-                    <li class="menu__item menu__item--welcome"><a class="menu__link menu__link--welcome" href="about.html">Обо мне</a></li>
-                    <li class="menu__item menu__item--welcome"><a class="menu__link menu__link--welcome" href="blog.html">Блог</a></li>
-                  </ul>
-                </nav>
+            </div>
+            <div class="user__pages">
+              <nav class="menu menu--welcome">
+                <ul class="menu__list menu__list--welcome">
+                  <li class="menu__item menu__item--welcome"><a class="menu__link menu__link--welcome" href="works.html">Мои работы</a></li>
+                  <li class="menu__item menu__item--welcome"><a class="menu__link menu__link--welcome" href="about.html">Обо мне</a></li>
+                  <li class="menu__item menu__item--welcome"><a class="menu__link menu__link--welcome" href="blog.html">Блог</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div class="user user--back">
+            <div class="user__container">
+              <h1 class="user__title">
+                <div class="subtitle subtitle--auth">Авторизуйтесь</div>
+              </h1>
+              <div class="user__form">
+                <form class="form">
+                  <div class="form__row">
+                    <div class="form__input-icon">
+                      <svg class="form__icon-login">
+                        <use xlink:href="./assets/images/icons/sprite.svg#login"></use>
+                      </svg>
+                    </div>
+                    <input class="form__login-control" type="text" placeholder="Логин" name="login">
+                  </div>
+                  <div class="form__row">
+                    <div class="form__input-icon">
+                      <svg class="form__icon-password">
+                        <use xlink:href="./assets/images/icons/sprite.svg#password"></use>
+                      </svg>
+                    </div>
+                    <input class="form__login-control" type="password" placeholder="Пароль" name="password">
+                  </div>
+                  <div class="form__checkbox">
+                    <label class="form__checkbox-wrap">
+                      <input class="form__check" type="checkbox" name="human" checked>
+                      <svg class="form__check-fake">
+                        <use xlink:href="./assets/images/icons/sprite.svg#check"></use>
+                      </svg><span class="form__check-text">Я человек</span>
+                    </label>
+                  </div>
+                  <div class="form__question"> <span class="form__question-text">Вы точно не робот?</span>
+                    <div class="form__question-btns">
+                      <label class="form__question-wrap" for="yes">
+                        <input class="form__radio" type="radio" name="robot" value="yes" id="yes">
+                        <div class="form__radio-fake"></div><span class="form__radio-text">Да</span>
+                      </label>
+                      <label class="form__question-wrap" for="no">
+                        <input class="form__radio" type="radio" name="robot" value="no" id="no">
+                        <div class="form__radio-fake"></div><span class="form__radio-text">Не уверен  </span>
+                      </label>
+                    </div>
+                  </div>
+                </form>
               </div>
+            </div>
+            <div class="user__pages">
+              <nav class="user__btns">
+                <button class="user__page js-back-to-main" type="button">На главную</button>
+                <button class="user__page" type="button" method="POST">Войти</button>
+              </nav>
             </div>
           </div>
         </div>

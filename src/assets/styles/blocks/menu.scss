@@ -5,9 +5,6 @@
     &__list {
         display: flex;
 
-        &--welcome {
-            justify-content: space-around;
-        }
     }
 
     &__item {
@@ -21,13 +18,25 @@
             &:first-child {
                 margin-left: 30px;
             }
-
         }
 
         &--welcome {
-            padding: 15px 31px;
+            flex-grow: 1;
+            text-align: center;
+            padding-top: 15px;
+            padding-bottom: 15px;
             background-color: $green;
             color: #fff;
+            border-right: 1px solid rgba(252, 252, 252, 0.85);
+
+            &:last-child {
+                border-right-color: $green;
+                border-bottom-right-radius: 5px;
+            }
+
+            &:first-child {
+                border-bottom-left-radius: 5px;
+            }
 
             &:hover {
                 background-color: $green-hover;
@@ -38,7 +47,7 @@
     &__link {
         text-decoration: none;
         color: $white;
-        transition: 500ms;
+        transition: .5s;
 
         &--footer {
 
@@ -47,7 +56,6 @@
             }
         }
     }
-
 }
 
 .popup {
@@ -145,6 +153,6 @@
 }
 
 .scroll-hidden {
-    overflow: hidden;
+    overflow-y: hidden;
     display: block;
 }

@@ -18,16 +18,15 @@
     }
 
     &--feedback,
-    &--slider {
+    &--slider,
+    &--auth  {
         font-size: 35px;
     }
 
     &--about-me {
-        position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 63px;
+        @include center;
+
+        font-size: 63px;
     }
 
     &:before {
