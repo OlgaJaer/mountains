@@ -7,6 +7,7 @@
   justify-content: center;
   align-items: center;
   min-height: 650px;
+  perspective: 1000px;
 
   &__btn {
     position: absolute;
@@ -21,6 +22,7 @@
       font-weight: 400;
       color: $white;
       text-align: center;
+      transition: .8s;
 
 
       &:hover {
@@ -33,11 +35,11 @@
   &__block {
     width: 380px;
     height: 395px;
-    background-color: #fcfcfc;
-    opacity: 0.85;
-    border-radius: 5px; 
+    //background-color: #fcfcfc;
+    //opacity: 0.85;
+    //border-radius: 5px; 
     position: relative;
-    //transform-style: preserve-3d;
+    transform-style: preserve-3d;
     perspective: 1000px;
   }
 

@@ -28,6 +28,7 @@
             background-color: $green;
             color: #fff;
             border-right: 1px solid rgba(252, 252, 252, 0.85);
+            transition: .8s;
 
             &:last-child {
                 border-right-color: $green;

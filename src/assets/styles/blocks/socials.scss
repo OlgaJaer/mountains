@@ -36,13 +36,13 @@
         width: 25px;
         height: 25px;
         cursor: pointer;
-        transition: 300ms;
 
         &--block {
             fill: rgba($green, 0.5);
+            transition: .8s;
 
             &:hover {
-                transition: 500ms;
+                transition: .8s;
                 fill: rgba($green, 1)
             }
         }
