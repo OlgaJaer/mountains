@@ -1,12 +1,12 @@
-.skills__left-title {
-    position: relative;
-}
 .about {
     &__title-icon {
         position: absolute;
-        top:-120px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-60%, -60%);
     }
 }
+
 .skills {
     position: relative;
     display: flex;
@@ -14,6 +14,12 @@
 
     @media (min-width: 1200px) {
         flex-wrap: nowrap;
+    }
+
+    &__left-title {
+        position: relative;
+        height: 20vh;
+        margin-bottom: 10px;
     }
 
     &:before {

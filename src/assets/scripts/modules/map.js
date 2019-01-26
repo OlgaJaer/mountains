@@ -9,7 +9,7 @@ var initMap = function () {
         lng: 56.002270
     };
 
-    map = new google.maps.Map(document.getElementById('map'), {
+    map = new google.maps.Map(document.getElementById("map"), {
         center: coordinates,
         zoom: 15,
         scrollwheel: false,
@@ -188,36 +188,23 @@ var initMap = function () {
         }
     ],
 });
-/*  window.onresize = function (){
-    var width = document.documentElement.clientWidth;
-     console.log(width);
-      if (width < 480) {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 54.751030, lng: 56.002270},
-          zoom: 15,
-          scrollwheel: false,
-          disableDefaultUI: true
-        }
-    )}
-  };*/
-  
 
-  var image = {
+var image = {
     url: './assets/images/map_marker.svg'
-  };
-  marker = new google.maps.Marker({
+};
+marker = new google.maps.Marker({
     position: {lat: 54.751030, lng: 56.002270},
     map: map,
     icon: image
-  });
-  marker.addListener('click', toggleBounce);
+});
+marker.addListener('click', toggleBounce);
 };
 function toggleBounce() {
-  if (marker.getAnimation() !== null) {
-    marker.setAnimation(null);
-  } else {
-    marker.setAnimation(google.maps.Animation.BOUNCE);
-  }
+    if (marker.getAnimation() !== null) {
+        marker.setAnimation(null);
+        } else {
+        marker.setAnimation(google.maps.Animation.BOUNCE);
+    }
 }
 
 

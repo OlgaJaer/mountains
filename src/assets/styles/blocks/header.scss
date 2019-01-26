@@ -1,7 +1,11 @@
 .header {
     height: 100vh;
     min-height: 650px;
-    background: url("./assets/images/bg/mountains.jpg") center center / cover no-repeat;position: relative;
+    background-image: url(./assets/images/bg/mountains.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,6 +19,7 @@
     }
 
     &--blog {
+        height: 515px;
         clip-path: polygon(0 0, 0 50%, 50% 70%, 100% 50%, 100% 0);
     }
 
