@@ -14,6 +14,11 @@
     left: 50%;
     top: 40%;
     transform: translate(-50%, -40%);
+    transition: all .5s;
+
+    @include phones {
+      top: 20%;
+    }
   }
   
   .contacts__info {

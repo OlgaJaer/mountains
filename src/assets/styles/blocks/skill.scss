@@ -20,11 +20,21 @@
     &__title {
         font-size: 28px;
         margin-bottom: 20px;
+
+        @include tablets {
+            text-align: center; 
+            font-size: 25px;
+        }
     }
 }
 
 .skills-row__list {
     display: flex;
+
+    @include tablets {
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
 }
 
 .skills-row__item {
