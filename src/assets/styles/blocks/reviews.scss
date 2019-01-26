@@ -61,7 +61,10 @@
     align-items: center;
     flex-wrap: wrap;
 
-    
+    @include phones {
+        flex-direction: column;
+    }
+
 }
 
 .reviews__item {

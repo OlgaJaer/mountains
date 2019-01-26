@@ -24,13 +24,20 @@
     &--slider,
     &--auth  {
         font-size: 35px;
+
+        @include phones {
+            font-size: 20px;
+        }
     }
 
     &--about-me {
         @include center;
-
         font-size: 63px;
+        @include phones {
+            font-size: 35px;
+        }
     }
+
 
     &:before {
         background-color: $grey;

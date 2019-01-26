@@ -2,12 +2,12 @@
     .form__input-icon
         +icon('login', 'form__icon-login')
                     
-    input.form__login-control(type='text' placeholder='Логин' name='login' autofocus)
+    input.form__login-control(type='text' placeholder='Логин' name='login' autofocus required)
 .form__row
     .form__input-icon
         +icon('password', 'form__icon-password')
                     
-    input.form__login-control(type='password' placeholder='Пароль' name='password')
+    input.form__login-control(type='password' placeholder='Пароль' name='password' required)
 .form__checkbox
     label.form__checkbox-wrap
         input.form__check(type='checkbox' name='human' checked)

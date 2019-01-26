@@ -6,13 +6,17 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 650px;
+  //min-height: 650px;
   perspective: 1000px;
 
   &__btn {
     position: absolute;
     top: 40px;
     right: 40px;
+
+    @include phones {
+      right: 30%;
+    }
 
     &-autoriz {
       padding: 15px 28px;
@@ -23,7 +27,6 @@
       color: $white;
       text-align: center;
       transition: .8s;
-
 
       &:hover {
         background-color: #fff;
@@ -46,5 +49,9 @@
   &__copyright {
     position: absolute;
     bottom: 40px;
+
+    @include phones {
+      padding: 0 20px;
+    }
   }
 }

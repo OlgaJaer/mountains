@@ -57,10 +57,9 @@
             font-size: 16px;
             font-weight: 400;
             line-height: 26px;
-            outline: none;
         
             &:hover {
-                color: $green;
+                color: $green-hover;
                 transition: .5s;
         
                 @include tablets {
