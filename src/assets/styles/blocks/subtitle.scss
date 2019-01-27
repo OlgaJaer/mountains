@@ -3,6 +3,7 @@
     font-family: 'bernier';
     font-size: 24px;
     position: relative;
+    white-space: nowrap;
 
     &--about {
         position: absolute;
@@ -33,6 +34,7 @@
     &--about-me {
         @include center;
         font-size: 63px;
+
         @include phones {
             font-size: 35px;
         }

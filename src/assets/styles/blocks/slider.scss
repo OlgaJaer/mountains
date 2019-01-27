@@ -1,9 +1,3 @@
-@mixin tablets {
-    @media screen and (max-width: 768px) {
-        @content;
-    }
-}
-
 .slider {
     //background: #faf8f0;
 
@@ -14,7 +8,16 @@
         &-pic {
             fill: #f0eee7;
             width: 506px;
-            height: 165px;
+            //height: 165px;
+            transition: all .3s;
+
+            @include tablets {
+                width: 450px;
+            }
+
+            @include phones {
+                width: 370px;
+            }
         }
 
         .subtitle {
@@ -23,6 +26,14 @@
             top: 50%;
             transform: translate(-50%, -50%);
             font-size: 63px;
+        }
+
+        @include tablets {
+            font-size: 45px;
+        }
+
+        @include phones {
+            font-size: 35px;
         }
     }
 }

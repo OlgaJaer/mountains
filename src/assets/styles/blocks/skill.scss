@@ -5,6 +5,7 @@
     height: 110px;
     color: $green;
     margin-right: 20px;
+    margin-bottom: 10px;
 }
 
 .skill__figure {
@@ -34,6 +35,7 @@
     @include tablets {
         justify-content: space-between;
         margin-bottom: 10px;
+        flex-wrap: wrap;
     }
 }
 

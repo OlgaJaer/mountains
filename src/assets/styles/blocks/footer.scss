@@ -16,12 +16,11 @@
         flex-direction: column;
         margin-top: 10px;
         //margin-bottom: 10px;
+        height: auto;
     }
 
     &:first-child {
         border-bottom: 1px solid rgba($light-grey, 0.3);
-
-
     }
 }
 

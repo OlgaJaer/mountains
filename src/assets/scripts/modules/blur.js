@@ -4,8 +4,8 @@ var blur = (function () {
 
     return {
         set: function() {
-            var imgWidth = document.querySelector('.reviews').offsetWidth,
-                imgHeight = document.querySelector('.reviews').offsetHeight,
+            var imgWidth = document.querySelector('.reviews__bg').offsetWidth,
+                imgHeight = document.querySelector('.reviews__bg').offsetHeight,
 
             
                 posLeft = -wrapper.offsetLeft,
