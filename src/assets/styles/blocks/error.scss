@@ -1,0 +1,29 @@
+.error {
+    position: relative;
+    overflow: hidden;
+    height: 0;
+    background-color: $beige;
+    margin-top: 0px;
+    border-radius: 5px;
+    text-align: center;
+    color: red;
+    transition: all .3s;
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        border: 10px solid transparent;
+        border-bottom: 10px solid $beige;
+        top: -20px;
+        left: 50%;
+        transform: translatex(-50%);
+    }
+
+    &--active {
+        height: auto;
+        margin-top: 14px;
+        padding: 16px;
+        overflow: visible;
+    }
+}

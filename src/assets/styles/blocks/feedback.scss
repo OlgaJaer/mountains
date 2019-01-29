@@ -68,6 +68,7 @@
 
 .feedback__contact-row {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     margin-bottom: 20px;
     width: 100%;
@@ -97,6 +98,10 @@
     &--message {
         height: 140px;
         resize: none;
+    }
+
+    &-error {
+        border-color: red;
     }
 }
 
