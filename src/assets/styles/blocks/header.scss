@@ -36,9 +36,21 @@
     }
 
 
-    &__content, &__bg {
-        @include center;
-        
+    &__block {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: center;   
+    } 
+    &__content {
+       position: absolute;
+       left: 0;
+       right: 0;
+       top: 50%;
+       transform: translateY(-50%);
+       text-align: center;   
     }
 
     &__user-desc {

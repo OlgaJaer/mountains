@@ -1,7 +1,8 @@
 (function () {
 
     var scrollParallax = (function () {
-        var bg = document.querySelector('.header__bg');
+        var user1 = document.querySelector('.header-container');
+        //var bg = document.querySelector('.header__block');
         var user = document.querySelector('.header__content');
   
         return {
@@ -15,8 +16,9 @@
             },
   
             init: function (wScroll) {
-                this.move(bg, wScroll, 100);
-                this.move(user, wScroll, 45);
+                this.move(user1, wScroll, 70)
+                //this.move(bg, wScroll, 50);
+                this.move(user, wScroll, 90);
             }
         }
     })();
