@@ -4,7 +4,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: #0005;
+    background-color: #009688;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,30 +13,29 @@
 
 .overlay__container {
     position: relative;
-    width: 250px;
-    background: #ffffff;
+    background-color: #ffffff;
     border-radius: 5px;
-    padding: 20px 30px;
-    margin: 0;
+    padding: 20px 50px;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
 .overlay__content {
     text-align: center;
-    padding-bottom: 30px;
+    padding-bottom: 10px;
+    font-family: 'Roboto-Regular';
 }
 
 .overlay__btn {
-
+width: 100px;
+height: 40px;
     padding: 7px 11px;
-    background-color: red;
+    background-color: $green;
     border-radius: 5px;
     border: 1px solid transparent;
     color: #fff;
-    font-size: rem(13px);
-    font-weight: 500;
     text-transform: uppercase;
     text-decoration: none;
 }
