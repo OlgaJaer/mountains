@@ -4,7 +4,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #009688;
+    background-color: rgba(0, 150, 136, 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,13 +24,14 @@
 
 .overlay__content {
     text-align: center;
-    padding-bottom: 10px;
-    font-family: 'Roboto-Regular';
+    //padding-bottom: 10px;
+    font-family: 'Roboto';
+    font-weight: 500;
 }
 
 .overlay__btn {
-width: 100px;
-height: 40px;
+    width: 100px;
+    height: 40px;
     padding: 7px 11px;
     background-color: $green;
     border-radius: 5px;

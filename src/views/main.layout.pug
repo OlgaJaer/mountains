@@ -11,7 +11,7 @@ html(lang="ru")
     title Portfolio | #{title}
     link(rel='stylesheet' href='main.min.css')
   body
-    .wrapper
+    .wrapper.js_wrapper
       .maincontent
         block content
         
@@ -20,6 +20,6 @@ html(lang="ru")
     include ./components/entry 
     include ./common/popup
 
-    //-script(src='bootloader.bundle.js')
-    //-script(src='vendor.bundle.js')
+    script(src='bootloader.bundle.js')
+    script(src='vendor.bundle.js')
     block scripts

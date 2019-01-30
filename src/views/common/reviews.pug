@@ -31,24 +31,8 @@ section.reviews
                     .reviews__auth-data
                         .reviews__name Сабанцев Владимир
                         .reviews__position преподаватель
-    .feedback-container
-        form.feedback__form
-            .feedback__blur-elem
-        
-            .feedback__title
-                .subtitle.subtitle--feedback Связаться со мной
-            .feedback__contact-row
-                input(name='name' placeholder='Имя' required).feedback__text.input__name
-                .error
-            .feedback__contact-row    
-                input(type="email" name='email' placeholder='Email' required).feedback__text.input__email
-                .error
-            .feedback__contact-row
-                textarea(name="message" placeholder='Ваше сообщение' required).feedback__text.feedback__text--message
-                .error
-            .feedback__btns
-                button(type="submit").button.button__submit Отправить
-                button(type='reset').button.button__reset Очистить
+    include ./feedback.pug
+    
     .bottom__arrow
         button.arrow(type="button")
-            +icon('portf_arrow_up', 'arrow__down')
+            +icon('portf_arrow_up', 'arrow__up')

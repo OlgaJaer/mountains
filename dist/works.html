@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="main.min.css">
   </head>
   <body>
-    <div class="wrapper">
+    <div class="wrapper js_wrapper">
       <div class="maincontent">
-        <header class="header">
+        <header class="header js_header">
           <div class="header-container">
             <div class="header__socials">
               <ul class="socials">
@@ -136,13 +136,13 @@
               </div>
               <div class="feedback__btns">
                 <button class="button button__submit" type="submit">Отправить</button>
-                <button class="button button__reset" type="reset">Очистить</button>
+                <button class="button button__reset" type="reset">Очистить                                      </button>
               </div>
             </form>
           </div>
           <div class="bottom__arrow">
             <button class="arrow" type="button">
-              <svg class="arrow__down">
+              <svg class="arrow__up">
                 <use xlink:href="./assets/images/icons/sprite.svg#portf_arrow_up"></use>
               </svg>
             </button>
@@ -274,6 +274,8 @@
         </ul>
       </nav>
     </div>
+    <script src="bootloader.bundle.js"></script>
+    <script src="vendor.bundle.js"></script>
     <script src="works.bundle.js"></script>
   </body>
 </html>

@@ -39,8 +39,6 @@ send.addEventListener('click', e => {
     }
 });
 
-
-
 function createOverlay(content) {
     const overlayElement = document.createElement("div");
     overlayElement.classList.add("overlay");
@@ -68,8 +66,6 @@ function createOverlay(content) {
 
     return overlayElement;
 }
-
-
 
 function validateForm(form) {
     let valid = true;
