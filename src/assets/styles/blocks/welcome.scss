@@ -42,8 +42,10 @@
     //opacity: 0.85;
     //border-radius: 5px; 
     position: relative;
+    -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
     perspective: 1000px;
+    z-index: 1;
   }
 
   &__copyright {

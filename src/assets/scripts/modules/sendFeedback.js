@@ -5,7 +5,7 @@ send.addEventListener('click', e => {
     e.preventDefault();
 
     if (validateForm(form)) {
-        console.log('ok');
+     
         const data = {
             name: form.elements.name.value,
             email: form.elements.email.value,

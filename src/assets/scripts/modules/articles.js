@@ -29,7 +29,7 @@ function anchorActive() {
             let currentArticle = document.querySelector(`[data-article = "${indexBtn}"]`); 
             let coord = currentArticle.getBoundingClientRect().top; 
             let start = null; 
-            console.log(windowY);
+            
             requestAnimationFrame(step); 
       
             function step(time) {
@@ -42,7 +42,6 @@ function anchorActive() {
                     } else {
                         coordY = Math.min(windowY + progress / speed, windowY + coord);
                     }
-                    console.log(coordY);
 
                 window.scrollTo(0, coordY); 
         

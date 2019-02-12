@@ -5,7 +5,7 @@ var backBtn = document.querySelector(".js-back-to-main");
 
 authBtn.addEventListener('click', function() {
     userFront.style="transform: rotateY(180deg)";
-    userBack.style="transform: rotateY(360deg)";
+    userBack.style="transform: rotateY(0deg)";
     authBtn.style.display = 'none';
 });
 

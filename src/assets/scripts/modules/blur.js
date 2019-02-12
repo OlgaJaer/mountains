@@ -11,15 +11,12 @@ var blur = (function () {
                 posLeft = -wrapper.offsetLeft,
                 posTop = -wrapper.offsetTop,
                 blurCSS = form.style;
-                console.log(imgWidth); 
-                console.log(imgHeight); 
+         
             wrapper.style.height = imgHeight;
                 
             blurCSS.backgroundSize = imgWidth + 'px' + ' ' + imgHeight + 'px';    
             blurCSS.backgroundPosition = posLeft + 'px' + ' ' + posTop + 'px' ;   
-            console.log(blurCSS.backgroundPosition) ;   
-
-
+             
         }
     }
 }());
