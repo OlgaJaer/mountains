@@ -11,7 +11,7 @@
         "title" : "Лендинг магазина бургеров",
         "skills" : "Html, Css, JS, Gulp",
         "photo" :  "./assets/images/content/slider/burger.png",
-        "link" : "//olgajaer.github.io/burgers/"
+        "link" : "//olgajaer.github.io/burgers/dist"
     },
     {
         "id": 3,
